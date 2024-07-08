@@ -15,7 +15,7 @@ class TaskController extends Controller
      */
     public function index()
     {
-        return TaskResource::collection(Task::with('steps')->get());
+        return TaskResource::collection(Task::with('steps')->orderByDesc('id')->get());
     }
 
     /**

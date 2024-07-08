@@ -22,7 +22,7 @@ class UpdateTaskRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'      =>      'required|max:150|unique:tasks,name,'.$this->route('task'),
+            'name'      =>      'required|max:150',
             'note'      =>      'nullable|max:200',
             'is_done'   =>      'bool'  
         ];

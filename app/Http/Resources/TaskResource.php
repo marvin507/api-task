@@ -17,8 +17,9 @@ class TaskResource extends JsonResource
         return [
             'id'        => $this->id,
             'name'      => $this->name,
+            'note'      => $this->note,
             'steps'     => StepResource::collection($this->steps) ?? [],
-            'is_done'   => $this->is_done
+            'is_done'   => $this->is_done ?  true : false,
         ];
     }
 }
